@@ -2,8 +2,8 @@
 https://www.youtube.com/watch?v=d5x0JCZbAJs
 
 # TODO
-- [ ] Make it deploy (vercel)
-- [ ] Scaffold basic UI with mock data
+- [x] Make it deploy (vercel)
+- [x] Scaffold basic UI with mock data
 - [ ] Actually setup database (w/ vercel postgress)
 - [ ] Attach database to the UI
 - [ ] Setup Authentication (w/ clerk)
