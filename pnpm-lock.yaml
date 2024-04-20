@@ -32,6 +32,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  server-only:
+    specifier: ^0.0.1
+    version: 0.0.1
   uploadthing:
     specifier: ^6.9.0
     version: 6.9.0(next@14.2.1)(tailwindcss@3.4.3)
@@ -59,8 +62,8 @@ devDependencies:
     specifier: ^7.1.1
     version: 7.7.0(eslint@8.57.0)(typescript@5.4.5)
   drizzle-kit:
-    specifier: ^0.20.14
-    version: 0.20.14
+    specifier: ^0.20.16
+    version: 0.20.16
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -189,12 +192,6 @@ packages:
     dependencies:
       csstype: 3.1.1
     dev: false
-
-  /@drizzle-team/studio@0.0.39:
-    resolution: {integrity: sha512-c5Hkm7MmQC2n5qAsKShjQrHoqlfGslB8+qWzsGGZ+2dHMRTNG60UuzalF0h0rvBax5uzPXuGkYLGaQ+TUX3yMw==}
-    dependencies:
-      superjson: 2.2.1
-    dev: true
 
   /@esbuild-kit/core-utils@3.3.2:
     resolution: {integrity: sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ==}
@@ -647,6 +644,21 @@ packages:
   /@eslint/js@8.57.0:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  /@hono/node-server@1.11.0:
+    resolution: {integrity: sha512-TLIJq9TMtD1NEG1mVoqNUn1Ita0qSaB5XboZErjFBcO/GJYXwWY4dVdTi9G0lbxtu0x+hJXDItcLaFHb7rlFTw==}
+    engines: {node: '>=18.14.1'}
+    dev: true
+
+  /@hono/zod-validator@0.2.1(hono@4.2.5)(zod@3.22.4):
+    resolution: {integrity: sha512-HFoxln7Q6JsE64qz2WBS28SD33UB2alp3aRKmcWnNLDzEL1BLsWfbdX6e1HIiUprHYTIXf5y7ax8eYidKUwyaA==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
+    dependencies:
+      hono: 4.2.5
+      zod: 3.22.4
+    dev: true
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -1707,12 +1719,13 @@ packages:
       wordwrap: 1.0.0
     dev: true
 
-  /drizzle-kit@0.20.14:
-    resolution: {integrity: sha512-0fHv3YIEaUcSVPSGyaaBfOi9bmpajjhbJNdPsRMIUvYdLVxBu9eGjH8mRc3Qk7HVmEidFc/lhG1YyJhoXrn5yA==}
+  /drizzle-kit@0.20.16:
+    resolution: {integrity: sha512-WoqV0XDny8mHnVoLYcUs6H3Ae1HBxeV0zi3VXG/mTahIQYfadZmIc3eRqzXjD3yxemj+GdHI1nThddmsoabdIA==}
     hasBin: true
     dependencies:
-      '@drizzle-team/studio': 0.0.39
       '@esbuild-kit/esm-loader': 2.6.5
+      '@hono/node-server': 1.11.0
+      '@hono/zod-validator': 0.2.1(hono@4.2.5)(zod@3.22.4)
       camelcase: 7.0.1
       chalk: 5.3.0
       commander: 9.5.0
@@ -1721,9 +1734,11 @@ packages:
       esbuild-register: 3.5.0(esbuild@0.19.12)
       glob: 8.1.0
       hanji: 0.0.5
+      hono: 4.2.5
       json-diff: 0.9.0
       minimatch: 7.4.6
       semver: 7.6.0
+      superjson: 2.2.1
       zod: 3.22.4
     transitivePeerDependencies:
       - supports-color
@@ -2766,6 +2781,11 @@ packages:
     resolution: {integrity: sha512-2bsegYkkHO+h/9MGbn6KWcE45cHZgPANo5LXF7EvWdT0yT2EguSVO1nDgU5c8+ZOPwp2vMNa7YFsJhVcDR9Sdg==}
     dev: true
 
+  /hono@4.2.5:
+    resolution: {integrity: sha512-uonJD3i/yy005kQ7bPZRVfG3rejYJwyPqBmPoUGijS4UB/qM+YlrZ7xzSWy+ByDu9buGHUG+f+SKzz03Y6V1Kw==}
+    engines: {node: '>=16.0.0'}
+    dev: true
+
   /ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
@@ -3758,6 +3778,10 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
+    dev: false
 
   /set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
