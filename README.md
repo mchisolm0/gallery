@@ -11,7 +11,8 @@ https://www.youtube.com/watch?v=d5x0JCZbAJs
 - [x] Attach database to the UI
 - [x] Setup Authentication (w/ clerk)
 - [x] Add image upload
-- [x] "taint" (server-only) [ 1 hr 10 min ]
+- [x] "taint" (server-only)
+- [x] Use Next/Image component
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ server actions)
