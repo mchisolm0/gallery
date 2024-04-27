@@ -32,7 +32,7 @@ const config = withSentryConfig(
     // Suppresses source map uploading logs during build
     silent: true,
     org: "matthew-chisolm",
-    project: "javascript-nextjs",
+    project: "gallery",
   },
   {
     // For all available options, see:
@@ -65,4 +65,3 @@ const config = withSentryConfig(
 );
 
 export default config;
-
