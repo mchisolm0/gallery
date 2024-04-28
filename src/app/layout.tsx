@@ -41,10 +41,11 @@ export default function RootLayout({
         />
         <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
           <TopNav />
-          {children}
-          {modal}
-          <div id="modal-root" />
-          <SignedIn>{children}</SignedIn>
+          <SignedIn>
+            {children}
+            {modal}
+            <div id="modal-root"></div>
+          </SignedIn>
           <SignedOut />
         </body>
       </html>
