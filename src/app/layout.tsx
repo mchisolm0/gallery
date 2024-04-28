@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 import "@uploadthing/react/styles.css";
 
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
 
 import { Inter } from "next/font/google";
 import { TopNav } from "./_components/topnav";
@@ -39,7 +39,8 @@ export default function RootLayout({
         />
         <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
           <TopNav />
-          {children}
+          <SignedIn>{children}</SignedIn>
+          <SignedOut />
         </body>
       </html>
     </ClerkProvider>
