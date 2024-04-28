@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 import "@uploadthing/react/styles.css";
 
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
 
 import { Inter } from "next/font/google";
 import { TopNav } from "./_components/topnav";
@@ -44,6 +44,8 @@ export default function RootLayout({
           {children}
           {modal}
           <div id="modal-root" />
+          <SignedIn>{children}</SignedIn>
+          <SignedOut />
         </body>
       </html>
     </ClerkProvider>
