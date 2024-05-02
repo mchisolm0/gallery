@@ -41,12 +41,9 @@ export default function RootLayout({
         />
         <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
           <TopNav />
-          <SignedIn>
-            {children}
-            {modal}
-            <div id="modal-root"></div>
-          </SignedIn>
-          <SignedOut />
+          {children}
+          {modal}
+          <div id="modal-root"></div>
         </body>
       </html>
     </ClerkProvider>
