@@ -41,7 +41,7 @@ export default function RootLayout({
         />
         <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
           <TopNav />
-          {children}
+          <main className="overflow-y-scroll">{children}</main>
           {modal}
           <div id="modal-root"></div>
         </body>
