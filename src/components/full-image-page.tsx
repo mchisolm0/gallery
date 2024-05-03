@@ -1,4 +1,4 @@
-import { getImage } from "src/server/queries";
+import { getImage } from "~/server/queries";
 
 export default async function FullPageImageView(props: { id: number }) {
   const idAsNumber = Number(props.id);
