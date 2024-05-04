@@ -18,5 +18,5 @@ https://www.youtube.com/watch?v=d5x0JCZbAJs
 - [x] Make upload button less yuck
 - [x] Implement ShadUI (specifically toast)
 - [x] Analytics (postdog)
-- [ ] Delete button (w/ server actions)
+- [x] Delete button (w/ server actions)
 - [ ] Ratelimiting (upstash)
