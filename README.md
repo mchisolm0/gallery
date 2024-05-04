@@ -17,6 +17,6 @@ https://www.youtube.com/watch?v=d5x0JCZbAJs
 - [x] Routing/image page (parallel route)
 - [x] Make upload button less yuck
 - [x] Implement ShadUI (specifically toast)
-- [ ] Analytics (postdog)
+- [x] Analytics (postdog)
 - [ ] Delete button (w/ server actions)
 - [ ] Ratelimiting (upstash)
