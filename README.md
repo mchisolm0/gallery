@@ -19,4 +19,4 @@ https://www.youtube.com/watch?v=d5x0JCZbAJs
 - [x] Implement ShadUI (specifically toast)
 - [x] Analytics (postdog)
 - [x] Delete button (w/ server actions)
-- [ ] Ratelimiting (upstash)
+- [x] Ratelimiting (upstash)
